@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: hsl(27, 66%, 92%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+}
+
+.account-balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(10, 79%, 65%);
+  color: white;
+  width: 100%;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.balance h3 {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.card {
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.card h2 {
+  color: hsl(25, 47%, 15%);
+  font-size: 26px;
+}
+
+.data-chart {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.columns {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 2px solid hsl(29, 31%, 82%);
+}
+
+.column-container .tooltip {
+  visibility: hidden;
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: hsl(25, 47%, 15%);
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.column-container:hover .tooltip {
+  visibility: visible;
+}
+
+.column-container .column-1 {
+  height: 50px;
+  width: 45px;
+  border-radius: 5px;
+  background-color: hsl(10, 79%, 65%);
+}
+
+.column-1:hover {
+  background-color: hsla(10, 79%, 65%, 0.5);
+}
+
+.column-container .column-2 {
+  height: 80px;
+  width: 45px;
+  border-radius: 5px;
+  background-color: hsl(10, 79%, 65%);
+}
+
+.column-2:hover {
+  background-color: hsla(10, 79%, 65%, 0.5);
+}
+
+.column-container .column-3 {
+  height: 120px;
+  width: 45px;
+  border-radius: 5px;
+  background-color: hsl(186, 34%, 60%);
+}
+
+.column-3:hover {
+  background-color: hsla(186, 34%, 60%, 0.5);
+}
+
+.column-container .column-4 {
+  height: 80px;
+  width: 45px;
+  border-radius: 5px;
+  background-color: hsl(10, 79%, 65%);
+}
+
+.column-4:hover {
+  background-color: hsla(10, 79%, 65%, 0.5);
+}
+
+.column-container .column-5 {
+  height: 60px;
+  width: 45px;
+  border-radius: 5px;
+  background-color: hsl(10, 79%, 65%);
+}
+
+.column-5:hover {
+  background-color: hsla(10, 79%, 65%, 0.5);
+}
+
+.column-container .column-6 {
+  height: 100px;
+  width: 45px;
+  border-radius: 5px;
+  background-color: hsl(10, 79%, 65%);
+}
+
+.column-6:hover {
+  background-color: hsla(10, 79%, 65%, 0.5);
+}
+
+.column-container .column-7 {
+  height: 60px;
+  width: 45px;
+  border-radius: 5px;
+  background-color: hsl(10, 79%, 65%);
+}
+
+.column-7:hover {
+  background-color: hsla(10, 79%, 65%, 0.5);
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: hsl(28, 10%, 53%);
+}
+
+.total {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.total p {
+  color: hsl(28, 10%, 53%);
+}
+
+.current-month h2 {
+  color: hsl(25, 47%, 15%);
+  font-size: 45px;
+}
+
+.last-month h2 {
+  color: hsl(25, 47%, 15%);
+  text-align: end;
+  font-size: 18px;
+} 
