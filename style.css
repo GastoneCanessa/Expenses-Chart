@@ -33,7 +33,7 @@ body {
   background-color: hsl(10, 79%, 65%);
   color: white;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 25px;
   margin-bottom: 20px;
 }
@@ -47,7 +47,7 @@ body {
 .card {
   width: 100%;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 25px;
 }
 
@@ -87,6 +87,7 @@ body {
 .column-container .column-1 {
   height: 50px;
   width: 45px;
+  margin-bottom: 10px;
   border-radius: 5px;
   background-color: hsl(10, 79%, 65%);
 }
@@ -98,6 +99,7 @@ body {
 .column-container .column-2 {
   height: 80px;
   width: 45px;
+  margin-bottom: 10px;
   border-radius: 5px;
   background-color: hsl(10, 79%, 65%);
 }
@@ -109,6 +111,7 @@ body {
 .column-container .column-3 {
   height: 120px;
   width: 45px;
+  margin-bottom: 10px;
   border-radius: 5px;
   background-color: hsl(186, 34%, 60%);
 }
@@ -120,6 +123,7 @@ body {
 .column-container .column-4 {
   height: 80px;
   width: 45px;
+  margin-bottom: 10px;
   border-radius: 5px;
   background-color: hsl(10, 79%, 65%);
 }
@@ -131,6 +135,7 @@ body {
 .column-container .column-5 {
   height: 60px;
   width: 45px;
+  margin-bottom: 10px;
   border-radius: 5px;
   background-color: hsl(10, 79%, 65%);
 }
@@ -142,6 +147,7 @@ body {
 .column-container .column-6 {
   height: 100px;
   width: 45px;
+  margin-bottom: 10px;
   border-radius: 5px;
   background-color: hsl(10, 79%, 65%);
 }
@@ -153,6 +159,7 @@ body {
 .column-container .column-7 {
   height: 60px;
   width: 45px;
+  margin-bottom: 10px;
   border-radius: 5px;
   background-color: hsl(10, 79%, 65%);
 }
@@ -189,3 +196,90 @@ body {
   text-align: end;
   font-size: 18px;
 } 
+
+@media(max-width: 600px) {
+  .container {
+    width: 350px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .account-balance {
+    padding: 15px;
+  }
+
+  .column-container .tooltip {
+    visibility: hidden;
+    padding: 2px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    background-color: hsl(25, 47%, 15%);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .column-container p {
+    font-size: 14px;
+  }
+
+  .columns {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 2px solid hsl(29, 31%, 82%);
+  }
+
+  .column-container .column-1 {
+    height: 50px;
+    width: 30px;
+    border-radius: 3px;
+  }
+  
+  .column-container .column-2 {
+    height: 80px;
+    width: 30px;
+    border-radius: 3px;
+  }
+  
+  .column-container .column-3 {
+    height: 120px;
+    width: 30px;
+    border-radius: 3px;
+  }
+  
+  .column-container .column-4 {
+    height: 80px;
+    width: 30px;
+    border-radius: 3px;
+  }
+  
+  .column-container .column-5 {
+    height: 60px;
+    width: 30px;
+    border-radius: 3px;
+  }
+  
+  .column-container .column-6 {
+    height: 100px;
+    width: 30px;
+    border-radius: 3px;
+  }
+  
+  .column-container .column-7 {
+    height: 60px;
+    width: 30px;
+    border-radius: 3px;
+  }
+  
+  .total p {
+    font-size: 14px;
+  }
+  
+  .current-month h2 {
+    font-size: 35px;
+  }
+}
