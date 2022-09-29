@@ -30,46 +30,12 @@
       <h2>Spending - Last 7 days</h2>
       <div class="data-chart">
         <div class="columns">
-          <div class="column-container">
-            <div class="tooltip">$17.45</div>
-            <div class="column-1"></div>
-            <p>mon</p>
-          </div>
-          <div class="column-container">
-            <div class="tooltip">$34.91</div>
-            <div class="column-2"></div>
-            <p>tue</p>
-          </div>
-          <div class="column-container">
-            <div class="tooltip">$52.36</div>
-            <div class="column-3"></div>
-            <p>wed</p>
-          </div>
-          <div class="column-container">
-            <div class="tooltip">$31.07</div>
-            <div class="column-4"></div>
-            <p>thu</p>
-          </div>
-          <div class="column-container">
-            <div class="tooltip">$23.39</div>
-            <div class="column-5"></div>
-            <p>fri</p>
-          </div>
-          <div class="column-container">
-            <div class="tooltip">$43.28</div>
-            <div class="column-6"></div>
-            <p>sat</p>
-          </div>
-          <div class="column-container">
-            <div class="tooltip">$25.48</div>
-            <div class="column-7"></div>
-            <p>sun</p>
-          </div>
+          
         </div>
         <div class="total">
           <div class="current-month">
-            <p>Total this month</p>
-            <h2>$478.33</h2>
+            <p>Total this week</p>
+            
           </div>
           <div class="last-month">
             <h2>+2.4%</h2>
@@ -78,25 +44,73 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>  
 
-  
+<script>
+  let requestURl ='./data.json';
+  let request = new XMLHttpRequest();
+  request.open('GET', requestURl);
+  request.responseType = 'json';
+  console.log(request);
+  request.send();
 
-  
+  request.onload = function(){
+    const classe = request.response;
+    console.log(classe);
+    let total = 0;
+    const d = new Date();
+    let day = d.getDay();
+    //let width = screen.width;
+    const week_day={
+      1: 'mon',
+      2: 'tue',
+      3: 'wed',
+      4: 'thu',
+      5: 'fri',
+      6: 'sat',
+      7: 'sun'      
+    }
+    
+    
+    for(a in classe){
+        const body=document.querySelector('.columns');
+        
+        const n=document.createElement('div');
+        const h=document.createElement('div');
+        const s=document.createElement('div');
+        const p=document.createElement('p');
+        
+        p.textContent=classe[a].day;
+        
+        
+        //s.style.width='30px';
+        //s.style.backgroundColor='hsl(10, 79%, 65%)';
+        //s.style.borderRadius='10%';
+        //s.style.color='white';
+        n.setAttribute('class','tooltip');
+        n.textContent=classe[a].amount;
+        h.setAttribute('class','column');
+        if (classe[a].day==week_day[day]){
+          h.setAttribute('class','column-hover');
+        };
 
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-
-  
-  
+        
+        total+=classe[a].amount;
+        //h.style.height=classe[a].amount;
+        h.style.height=`${(classe[a].amount)*3}px`;
+        s.setAttribute('class','column-container');
+        s.appendChild(n);
+        s.appendChild(h);
+        s.appendChild(p);        
+        body.appendChild(s);
+        
+    }
+    const current_month=document.querySelector('.current-month');
+    const cur=document.createElement('h2');
+    cur.textContent=`$${total}`;
+    current_month.appendChild(cur);
+  } 
+</script> 
   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

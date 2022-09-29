@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-evenly;
+
+        }
+        p{
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="demo"></div>
+    </div>
+<script>
+  let requestURl ='./data.json';
+  let request = new XMLHttpRequest();
+  request.open('GET', requestURl);
+  request.responseType = 'json';
+  console.log(request);
+  request.send();
+
+  request.onload = function(){
+    const classe = request.response;
+    console.log(classe);
+    
+    
+    for(a in classe){
+        const body=document.querySelector('body');
+        const s=document.createElement('div');
+        s.textContent=classe[a].day;
+        s.style.height=(classe[a].amount)*3;
+        s.style.width='30px';
+        s.style.backgroundColor='hsl(10, 79%, 65%)';
+        s.style.borderRadius='10%';
+        s.style.color='white';
+        body.appendChild(s);
+    }
+  } 
+</script>   
+</body>
+</html>
